@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a class="nav-logo" href="index.html">QuizMaster</a>
+            <div class="nav-menu">
+                <button id="endQuizBtn" class="end-quiz-btn">End Quiz</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="quiz-screen">
+        <div class="main-content">
+            <div class="quiz-header">
+                <h1 id="quizTitle">JavaScript Quiz</h1>
+                <div class="quiz-info">
+                    <span class="quiz-count">Question 1 of 25</span>
+                </div>
+            </div>
+
+            <!-- Replace the question and options section with this skeleton loader -->
+            <div class="skeleton-loader" id="skeletonLoader">
+                <div class="skeleton-question">
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line"></div>
+                </div>
+
+                <div class="skeleton-options">
+                    <div class="skeleton-option"></div>
+                    <div class="skeleton-option"></div>
+                    <div class="skeleton-option"></div>
+                    <div class="skeleton-option"></div>
+                </div>
+            </div>
+
+            <!-- Add this hidden div that will contain the actual quiz content -->
+            <div class="quiz-content" id="quizContent" style="display: none;">
+                <div class="question">
+                    <p></p>
+                </div>
+
+                <div class="options">
+                </div>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="prev-btn" class="control-btn">❮ Previous</button>
+                <button id="next-btn" class="control-btn">Next ❯</button>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

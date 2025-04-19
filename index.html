@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a class="nav-logo" href="index.html">QuizMaster</a>
+        </div>
+    </nav>
+
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="main-content">
+            <div class="content-header">
+                <h1>QuizMaster</h1>
+                <p>Test your knowledge with a quiz.</p>
+            </div>
+
+            <div class="setup-form">
+                <div class="form-group">
+                    <label>Select your level:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="level" value="easy">
+                            <span>Beginner</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="level" value="medium">
+                            <span>Intermediate</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="level" value="hard">
+                            <span>Advanced</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Select topic:</label>
+                    <select id="category">
+                        <option value="">Select a topic</option>
+                        <option value="general">General Knowledge</option>
+                        <option value="geography">Geography</option>
+                        <option value="sports">Sports</option>
+                        <option value="history">History</option>
+                        <option value="art">Art</option>
+                        <option value="politics">Politics</option>
+                    </select>
+                </div>
+
+                <button id="startQuiz" class="start-btn">Start Quiz</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
