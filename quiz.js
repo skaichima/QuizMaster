@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
             throw new Error('Quiz settings not found');
         }
 
-        // Fetch questions from API
         fetchQuizQuestions(category, difficulty);
 
     } catch (error) {
@@ -30,7 +29,6 @@ async function fetchQuizQuestions(category, difficulty) {
     const quizContent = document.getElementById('quizContent');
 
     try {
-        // Show skeleton loader only during initial fetch
         skeletonLoader.style.display = 'block';
         quizContent.style.display = 'none';
 
@@ -41,7 +39,6 @@ async function fetchQuizQuestions(category, difficulty) {
 
         if (data.response_code === 0) {
             questions = data.results;
-            // Hide loader and show quiz after questions are fetched
             skeletonLoader.style.display = 'none';
             quizContent.style.display = 'block';
             initializeQuiz(questions);
@@ -67,13 +64,10 @@ function initializeQuiz(quizQuestions) {
     const scoreElement = document.querySelector('.quiz-score');
     const endQuizBtn = document.getElementById('endQuizBtn');
 
-    // Initialize user answers array
     userAnswers = new Array(quizQuestions.length).fill(null);
 
-    // Update quiz title
     quizTitle.textContent = `${quizQuestions[0].category} Quiz`;
 
-    // Setup end quiz button
     endQuizBtn.addEventListener('click', handleEndQuizClick);
 
     function handleEndQuizClick() {
@@ -102,7 +96,6 @@ function initializeQuiz(quizQuestions) {
         const question = quizQuestions[index];
         questionElement.innerHTML = question.question;
 
-        // Combine and shuffle answers
         const answers = [...question.incorrect_answers, question.correct_answer]
             .sort(() => Math.random() - 0.5);
 
@@ -114,7 +107,6 @@ function initializeQuiz(quizQuestions) {
             </label>
         `).join('');
 
-        // Update progress and buttons
         progressElement.textContent = `Question ${index + 1} of ${quizQuestions.length}`;
         prevBtn.disabled = index === 0;
         nextBtn.textContent = index === quizQuestions.length - 1 ? 'Finish Quiz' : 'Next ❯';
@@ -184,7 +176,6 @@ function initializeQuiz(quizQuestions) {
         `;
     }
 
-    // Event listeners
     nextBtn.addEventListener('click', () => {
         if (currentQuestion < quizQuestions.length) {
             if (checkAnswer()) {
@@ -207,6 +198,5 @@ function initializeQuiz(quizQuestions) {
         }
     });
 
-    // Start the quiz
     displayQuestion(currentQuestion);
 } 

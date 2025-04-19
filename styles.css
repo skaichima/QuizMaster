@@ -11,7 +11,6 @@ body {
     color: #000000;
 }
 
-/* Navigation */
 .nav {
     background-color: #1d2a35;
     color: white;
@@ -53,7 +52,6 @@ body {
     background-color: #04AA6D;
 }
 
-/* Main Content */
 .main-content {
     max-width: 1000px;
     margin: 76px auto 20px;
@@ -78,7 +76,6 @@ body {
     color: #404040;
 }
 
-/* Form Elements */
 .setup-form {
     max-width: 600px;
     margin: 0 auto;
@@ -125,7 +122,6 @@ select {
     font-size: 1rem;
 }
 
-/* Buttons */
 .start-btn {
     display: block;
     width: 100%;
@@ -143,7 +139,6 @@ select {
     background-color: #059862;
 }
 
-/* Quiz Screen */
 .quiz-header {
     border-bottom: 1px solid #E7E9EB;
     padding-bottom: 20px;
@@ -215,7 +210,6 @@ select {
     cursor: not-allowed;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
 
     .main-content {
@@ -386,7 +380,6 @@ select {
     background: rgba(220, 53, 69, 0.1);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .quiz-results {
         padding: 1rem;
@@ -434,7 +427,6 @@ select {
     background-color: #218838;
 }
 
-/* Skeleton Loader Styles */
 .skeleton-loader {
     animation: fade 1.5s infinite;
 }
@@ -492,7 +484,6 @@ select {
     }
 }
 
-/* Add this to your existing skeleton-option */
 .skeleton-option {
     background-image: linear-gradient(
         90deg,
